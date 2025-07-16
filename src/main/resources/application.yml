@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db.rdrrcgkmwsfxthvxagsg.supabase.co:5432/postgres
+    username: postgres
+    password: 1ecAw1FXvdpWcsQ0
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  profiles:
+    active: dev  # Enable dev profile for Swagger UI testing
+
+server:
+  port: 8080
+
+supabase:
+  api:
+    key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd2eGJ6Y3hqdWVnaHZydHNmZHhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkyODAzMjksImV4cCI6MjA2NDg1NjMyOX0.b8JmC_Q-O6K5k_5gpIiQWIDKE5jqyQxb9FgrfJzngkg
+  auth:
+    url: https://gvxbzcxjueghvrtsfdxc.supabase.co/auth/v1
+  jwt:
+    secret: v7dyiu735nxybSzPS41oWmOtOLwZyaJOApdGaFqWpTNGYkmL7yWP6fnKPG2FWSxr5AB5kSdFiRiT78YcB7vT5w==
+
+logging:
+  level:
+    com.busmate.routeschedule: INFO
+    org.springframework: WARN
+    org.hibernate: WARN
