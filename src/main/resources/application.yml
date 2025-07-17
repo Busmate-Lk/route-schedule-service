@@ -14,7 +14,7 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
   profiles:
-    active: dev  # Enable dev profile for Swagger UI testing
+    active: production  # Enable production profile for Swagger UI testing
 
 server:
   port: 8080
