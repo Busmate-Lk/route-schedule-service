@@ -19,8 +19,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      # Use system Maven instead of wrapper
       - name: Build JAR
-        run: ./mvnw package -DskipTests
+        run: mvn clean package -DskipTests
 
       - name: Copy JAR to EC2
         uses: appleboy/scp-action@master
