@@ -3,6 +3,7 @@ package com.busmate.routeschedule.controller;
 import com.busmate.routeschedule.dto.request.StopRequest;
 import com.busmate.routeschedule.dto.response.StopResponse;
 import com.busmate.routeschedule.service.StopService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/stops")
 @RequiredArgsConstructor
+@Tag(name = "Bus Stop Management", description = "APIs for managing bus stops")
 public class StopController {
     private final StopService stopService;
 

@@ -3,6 +3,7 @@ package com.busmate.routeschedule.controller;
 import com.busmate.routeschedule.dto.request.RouteGroupRequest;
 import com.busmate.routeschedule.dto.response.RouteGroupResponse;
 import com.busmate.routeschedule.service.RouteGroupService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/route-groups")
 @RequiredArgsConstructor
+@Tag(name = "Route Group Management", description = "APIs for managing route groups")
 public class RouteGroupController {
     private final RouteGroupService routeGroupService;
 

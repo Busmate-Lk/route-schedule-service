@@ -3,6 +3,7 @@ package com.busmate.routeschedule.controller;
 import com.busmate.routeschedule.dto.request.OperatorRequest;
 import com.busmate.routeschedule.dto.response.OperatorResponse;
 import com.busmate.routeschedule.service.OperatorService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/operators")
 @RequiredArgsConstructor
+@Tag(name = "Operator Management", description = "APIs for managing operators")
 public class OperatorController {
     private final OperatorService operatorService;
 

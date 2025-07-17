@@ -3,6 +3,7 @@ package com.busmate.routeschedule.controller;
 import com.busmate.routeschedule.dto.request.BusRequest;
 import com.busmate.routeschedule.dto.response.BusResponse;
 import com.busmate.routeschedule.service.BusService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/buses")
 @RequiredArgsConstructor
+@Tag(name = "Bus Management", description = "APIs for managing buses")
 public class BusController {
     private final BusService busService;
 

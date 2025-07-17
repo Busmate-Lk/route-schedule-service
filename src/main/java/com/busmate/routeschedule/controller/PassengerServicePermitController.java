@@ -3,6 +3,7 @@ package com.busmate.routeschedule.controller;
 import com.busmate.routeschedule.dto.request.PassengerServicePermitRequest;
 import com.busmate.routeschedule.dto.response.PassengerServicePermitResponse;
 import com.busmate.routeschedule.service.PassengerServicePermitService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/permits")
 @RequiredArgsConstructor
+@Tag(name = "Permit Management", description = "APIs for managing passenger service permits")
 public class PassengerServicePermitController {
     private final PassengerServicePermitService permitService;
 

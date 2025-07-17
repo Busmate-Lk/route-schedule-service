@@ -3,6 +3,7 @@ package com.busmate.routeschedule.controller;
 import com.busmate.routeschedule.dto.request.ScheduleRequest;
 import com.busmate.routeschedule.dto.response.ScheduleResponse;
 import com.busmate.routeschedule.service.ScheduleService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,16 +18,15 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/schedules")
 @RequiredArgsConstructor
+@Tag(name = "Schedule Management", description = "APIs for managing bus schedules")
 public class ScheduleController {
     private final ScheduleService scheduleService;
 
     @PostMapping
     public ResponseEntity<ScheduleResponse> createSchedule(@Valid @RequestBody ScheduleRequest request, Authentication authentication) {
         try {
-            log.info("Creating schedule with request: {}", request);
             String userId = authentication.getName();
             ScheduleResponse response = scheduleService.createSchedule(request, userId);
-            log.info("Schedule created successfully with id: {}", response.getId());
             return new ResponseEntity<>(response, HttpStatus.CREATED);
         } catch (Exception e) {
             log.error("Error creating schedule: {}", e.getMessage(), e);
