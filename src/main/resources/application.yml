@@ -2,8 +2,8 @@ spring:
   datasource:
     # Change from direct connection to transaction pooler
     url: jdbc:postgresql://aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
-    username: postgres.rdrrcgkmwsfxthvxagsg
-    password: 1ecAw1FXvdpWcsQ0
+    username: postgres.bixiyzllxffxqwutthmk
+    password: root
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
